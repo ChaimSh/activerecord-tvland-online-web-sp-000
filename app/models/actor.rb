@@ -6,10 +6,13 @@ class Actor < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
 
-  def list_roles(name)
+  def list_roles
     # can list all of its shows and characters
-    "#{name.characters} - #{name.shows}"
-
+    roles = []
+    characters = self.characters.map { |c| c.name}
+    shows = self.shows.map { |m| m.name}
+    role = characters.concat(shows)
+    roles << role.join(" - ")
   end
 
 
