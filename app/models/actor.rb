@@ -6,7 +6,7 @@ class Actor < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
 
-  def list_roles
+  def list_roles(characters, shows)
     # can list all of its shows and characters
     self.characters   self.shows
 
