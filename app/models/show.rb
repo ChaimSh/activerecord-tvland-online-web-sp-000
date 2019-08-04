@@ -9,7 +9,7 @@ class Show < ActiveRecord::Base
    #associated with the a show.
 
     actors = []
-    actors << Actor.full_name 
+    actors << Actor.full_name
     actors
   end
 end
