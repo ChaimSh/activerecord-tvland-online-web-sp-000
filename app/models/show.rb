@@ -9,7 +9,8 @@ class Show < ActiveRecord::Base
    #associated with the a show.
 
     actors = []
-    actors << Actor.full_name
+    actor = self.actor.map { |a| "#{a.first_name} #{a.last_name}"}
+    actors << actor
     actors
   end
 end
