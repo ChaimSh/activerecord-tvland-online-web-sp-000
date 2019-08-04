@@ -8,8 +8,6 @@ class Show < ActiveRecord::Base
    #Returns an Array of the full names of each actor
    #associated with the a show.
 
-
-    #actor =
     self.actors.map { |a| "#{a.first_name} #{a.last_name}"}
 
   end
